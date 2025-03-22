@@ -81,6 +81,15 @@ function MovieCards() {
   return (
     <div className="container mt-4">
       <h1 className="mb-4 text-center">Movies</h1>
+      <div className="mb-4">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Search for movies..."
+          value={searchQuery}
+          onChange={handleSearch}
+        />
+      </div>
 
       {/* 🎥 Movie Slider */}
       {featuredMovies.length > 0 && (
@@ -106,15 +115,7 @@ function MovieCards() {
       )}
 
       {/* 🔍 Search Input */}
-      <div className="mb-4">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search for movies..."
-          value={searchQuery}
-          onChange={handleSearch}
-        />
-      </div>
+ 
 
       {/* 🎬 Movie Cards */}
       <div className="row">
