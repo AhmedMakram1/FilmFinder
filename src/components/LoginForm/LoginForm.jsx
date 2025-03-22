@@ -29,7 +29,7 @@ const LoginForm = () => {
   
        
       
-       nav("/");
+       nav("/movies/:page");
      } catch (error) {
      
       

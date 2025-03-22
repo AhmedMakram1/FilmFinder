@@ -23,7 +23,7 @@ function NavBar() {
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
           <Nav className="me-auto">
-            <NavLink to="/" className="nav-link"> Home </NavLink>
+            {/* <NavLink to="/" className="nav-link"> Home </NavLink> */}
             <NavLink 
   to={isAuth ? "/movies/1" : "#"} 
   className="nav-link" 
