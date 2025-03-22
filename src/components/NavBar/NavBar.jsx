@@ -24,12 +24,18 @@ function NavBar() {
         <Container>
           <Nav className="me-auto">
             <NavLink to="/" className="nav-link"> Home </NavLink>
-            <NavLink to="/movies/1" className="nav-link" onClick={ ()=>{
-              toast('Please login First', {
-                icon: '😒',
-              });
-
-            }}> Movies </NavLink>
+            <NavLink 
+  to={isAuth ? "/movies/1" : "#"} 
+  className="nav-link" 
+  onClick={(e) => {
+    if (!isAuth) {
+      e.preventDefault(); 
+      toast('Please login First', { icon: '😒' });
+    }
+  }}
+> 
+  Movies 
+</NavLink>
 
             {isAuth?      <NavLink onClick={()=>{
               localStorage.removeItem("user")
